@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html>
+<head>
+			<link rel="stylesheet" href="styleR1.css">
+			<meta name="viewport" content="width=device-width, initial-scale=1">
+			
+			<script>
+				function passvalues()
+				{
+					var Invv=document.getElementById("Inv").value;
+					localStorage.setItem("KInv",Invv);
+					
+					var Rdate=document.getElementById("Date").value;
+					localStorage.setItem("Kdate",Rdate);
+				
+					
+					var Rname=document.getElementById("fname").value;
+					localStorage.setItem("Kname",Rname);
+					
+					
+					var Raddress=document.getElementById("address").value;
+					localStorage.setItem("Kaddress",Raddress);
+					
+					
+					var RGSTIN=document.getElementById("GSTIN").value;
+					localStorage.setItem("KGSTIN",RGSTIN);
+					
+					var RTransport=document.getElementById("Transport").value;
+					localStorage.setItem("KTransport",RTransport);
+					
+					var RVehicle=document.getElementById("Vehicle").value;
+					localStorage.setItem("KVehicle",RVehicle);
+					
+					var RSupply=document.getElementById("DSupply").value;
+					localStorage.setItem("KDSupply",RSupply);
+					
+					var RSupply=document.getElementById("PSupply").value;
+					localStorage.setItem("KTSupply",RSupply);
+					
+						
+					var RS1=document.getElementById("SNo1").value;
+					localStorage.setItem("KRS1",RS1);	
+						
+					var RS2=document.getElementById("SNo2").value;
+					localStorage.setItem("KRS2",RS2);
+
+					var RS3=document.getElementById("SNo3").value;
+					localStorage.setItem("KRS3",RS3);
+					
+					var RS4=document.getElementById("SNo4").value;
+					localStorage.setItem("KRS4",RS4);
+					
+					var RS5=document.getElementById("SNo5").value;
+					localStorage.setItem("KRS5",RS5);
+					
+					
+					
+					var RP1=document.getElementById("P1").value;
+					localStorage.setItem("KP1",RP1);	
+					
+					var RP2=document.getElementById("P2").value;
+					localStorage.setItem("KP2",RP2);	
+					
+					var RP3=document.getElementById("P3").value;
+					localStorage.setItem("KP3",RP3);	
+					
+					var RP4=document.getElementById("P4").value;
+					localStorage.setItem("KP4",RP4);	
+					
+					var RP5=document.getElementById("P5").value;
+					localStorage.setItem("KP5",RP5);	
+					
+					
+					
+					
+					var H1=document.getElementById("HSN1").value;
+					localStorage.setItem("KH1",H1);	
+					
+					var H2=document.getElementById("HSN2").value;
+					localStorage.setItem("KH2",H2);	
+					
+					var H3=document.getElementById("HSN3").value;
+					localStorage.setItem("KH3",H3);	
+					
+					var H4=document.getElementById("HSN4").value;
+					localStorage.setItem("KH4",H4);	
+					
+					var H5=document.getElementById("HSN5").value;
+					localStorage.setItem("KH5",H5);	
+					
+					
+					
+					var K1=document.getElementById("QTY1").value;
+					localStorage.setItem("KK1",K1);	
+					
+					var K2=document.getElementById("QTY2").value;
+					localStorage.setItem("KK2",K2);	
+					
+					var K3=document.getElementById("QTY3").value;
+					localStorage.setItem("KK3",K3);	
+					
+					var K4=document.getElementById("QTY4").value;
+					localStorage.setItem("KK4",K4);	
+					
+					var K5=document.getElementById("QTY5").value;
+					localStorage.setItem("KK5",K5);	
+					
+					
+					
+					var R1=document.getElementById("RATE1").value;
+					var EG1=R1/1.18;
+					var n1=EG1.toFixed(2);
+					localStorage.setItem("KR1",n1);	
+					
+					
+					var R2=document.getElementById("RATE2").value;
+					var EG2=R2/1.18;
+					var n2=EG2.toFixed(2);
+					localStorage.setItem("KR2",n2);	
+					
+					
+					var R3=document.getElementById("RATE3").value;
+					var EG3=R3/1.18;	
+					var n3=EG3.toFixed(2);
+					localStorage.setItem("KR3",n3);	
+					
+					
+					var R4=document.getElementById("RATE4").value;
+					var EG4=R4/1.18;	
+					var n4=EG4.toFixed(2);
+					localStorage.setItem("KR4",n4);
+					
+					
+					var R5=document.getElementById("RATE5").value;
+					var EG5=R5/1.18;	
+					var n5=EG5.toFixed(2);
+					localStorage.setItem("KR5",n5);	
+					
+					
+					var am1=K1*n1;
+					var amt1=am1.toFixed(2);	
+					localStorage.setItem("Kamt1",amt1);
+					
+					var am2=K2*n2;
+					var amt2=am2.toFixed(2);	
+					localStorage.setItem("Kamt2",amt2);
+					
+					var am3=K3*n3;
+					var amt3=am3.toFixed(2);	
+					localStorage.setItem("Kamt3",amt3);
+					
+					var am4=K4*n4;
+					var amt4=am4.toFixed(2);
+					localStorage.setItem("Kamt4",amt4);
+					
+					var am5=K5*n5;
+					var amt5=am5.toFixed(2);
+					localStorage.setItem("Kamt5",amt5);
+					
+					var total=parseFloat(amt1) + parseFloat(amt2) + parseFloat(amt3) + parseFloat(amt4) + parseFloat(amt5);
+					localStorage.setItem("tot",total);
+					
+					var gnum1=R1*K1;
+					var gnum2=R2*K2;
+					var gnum3=R3*K3;
+					var gnum4=R4*K4;
+					var gnum5=R5*K5;
+					
+					
+					var gst=parseFloat(gnum1)+parseFloat(gnum2)+parseFloat(gnum3)+parseFloat(gnum4)+parseFloat(gnum5);
+					localStorage.setItem("gstT",gst);
+					
+					var Tgst=gst-total;
+					
+					var DSGST=Tgst/2;
+					var SGST=DSGST.toFixed(2);
+					localStorage.setItem("SGST1",SGST);
+					
+					var DCGST=Tgst/2;
+					var CGST=DCGST.toFixed(2);
+					localStorage.setItem("CGST1",CGST);
+					
+					var DGtotal=parseFloat(total)+parseFloat(SGST)+parseFloat(CGST);
+					var Gtotal=DGtotal.toFixed(2);
+					localStorage.setItem("Gtot",Gtotal);
+					
+					
+					
+					return false;
+					
+					
+				}
+			</script>
+					
+
+</head>
+<body>
+
+<center><h3>INVOICE DETAILS</h3></center>
+
+<div class="container">
+  <form action="RS02.html">
+	
+	<p id="name">
+    INVOICE No:
+	</p>
+    <center><input type="text" id="Inv" placeholder="Ex:AD90595" required></br></center>
+	
+	
+	<p id="name">
+    Name
+	</p>
+    <center><input type="text" id="fname" placeholder="Ex:ADITYA" required></br></center>
+	
+	<p id="name">
+    Address
+	</p>
+    <center><input type="text" id="address" placeholder="Ex:Hyderabad"></br></center>
+	
+	<p id="name">
+	Date
+	</p>
+    <center><input type="date" id="Date"  ></br></center>
+	
+	<p id="name">
+	GSTIN/UIN
+	</p>
+    <center><input type="text" id="GSTIN"  ></br></center>
+	
+	<p id="name">
+	Transport Mode
+	</p>
+    <center><input type="text" id="Transport"></br></center>
+	
+	<p id="name">
+	Vehicle Number
+	</p>
+    <center><input type="text" id="Vehicle"></br></center>
+	
+	<p id="name">
+	Date of Supply
+	</p>
+    <center><input type="date" id="DSupply"></br></center>
+	
+	<p id="name">Place of Supply
+	</p>
+	
+    <center><input type="text" id="PSupply" ></br></center>
+	</br>
+	</br>
+	</br>
+	</br>
+	
+	
+	
+	<div class="main">
+	<center><h2>PRODUCT DETAILS</h2></center>
+	</div>
+	
+	<div class="container">
+	  	
+		<center>
+
+		<input type="number" id="SNo1"  value="Sl.No" placeholder="Sl.No" required>
+		<input type="text" class="product" id="P1"  placeholder="Product Description" required>	
+		<input type="text" class="HSN" id="HSN1"  placeholder="HSN CODE" required>	
+		<input type="number" class="QTY" id="QTY1"  placeholder="QTY" required>
+		<input type="text" class="Amt" id="RATE1"  placeholder="Rate" required></br>
+		
+		
+		<input type="number" id="SNo2"  placeholder="Sl.No" required>
+		<input type="text" class="product" id="P2" placeholder="Product Description" required>
+		<input type="text" class="HSN" id="HSN2" placeholder="HSN CODE" required>	
+		<input type="number" class="QTY" id="QTY2" placeholder="QTY" required>
+		<input type="text" class="Amt" id="RATE2" placeholder="Rate" required></br>
+		
+			
+		<input type="number" id="SNo3" placeholder="Sl.No">
+		<input type="text" class="product" id="P3" placeholder="Product Description">
+		<input type="text" class="HSN" id="HSN3" placeholder="HSN CODE">	
+		<input type="number" class="QTY" id="QTY3" placeholder="QTY">
+		<input type="text" class="Amt" id="RATE3" placeholder="Rate"></br>
+		
+		
+		<input type="number" id="SNo4" placeholder="Sl.No">
+		<input type="text" class="product" id="P4" placeholder="Product Description">
+		<input type="text" class="HSN" id="HSN4" placeholder="HSN CODE">	
+		<input type="number" class="QTY" id="QTY4" placeholder="QTY">
+		<input type="text" class="Amt" id="RATE4" placeholder="Rate"></br>	
+		
+		
+		<input type="number" id="SNo5" name="SNo5" placeholder="Sl.No">
+		<input type="text" class="product" id="P5"  placeholder="Product Description">	
+		<input type="text" class="HSN" id="HSN5"  placeholder="HSN CODE">	
+		<input type="number" class="QTY" id="QTY5"  placeholder="QTY">
+		<input type="text" class="Amt" id="RATE5"  placeholder="Rate"></br>	
+		
+		
+		</center>
+		
+
+	
+   <center> <input type="submit" value="Next" onclick="passvalues();"></center>
+   
+	
+  </form>
+</div>
+<input type="button" id="back" onclick="page()" name="button" value="back">
+</body>
+</html>
